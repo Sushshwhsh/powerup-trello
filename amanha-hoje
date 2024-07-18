@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Power-Up</title>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    <script>
+        TrelloPowerUp.initialize({
+            'board-buttons': function(t, options) {
+                return [{
+                    icon: 'https://example.com/icon.png',
+                    text: 'Mover Cartões',
+                    callback: function(t) {
+                        return t.popup({
+                            title: 'Mover Cartões',
+                            url: './move_cards.html',
+                            height: 184
+                        });
+                    }
+                }];
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Meu Power-Up</h1>
+</body>
+</html>
